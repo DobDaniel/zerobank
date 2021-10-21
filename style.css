@@ -199,4 +199,9 @@ strong {
   padding: 2rem 0;
   font-weight: 500;
 }
+
+.FooterLink {
+  text-decoration: none;
+  color: #1D3557;
+}
 /*# sourceMappingURL=style.css.map */
