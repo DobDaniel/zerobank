@@ -94,8 +94,12 @@ strong {
   border-radius: 1.125rem;
 }
 
+.CTAButton:hover {
+  background-color: #1D3557;
+}
+
 .CTAText {
-  color: #F1FAEE;
+  color: white;
   font-size: 1.125rem;
   font-weight: 600;
 }
@@ -125,6 +129,10 @@ strong {
 
 .OSLink {
   color: #E63946;
+}
+
+.OSLink:hover {
+  color: #1D3557;
 }
 
 .Acclamations {
@@ -203,5 +211,9 @@ strong {
 .FooterLink {
   text-decoration: none;
   color: #1D3557;
+}
+
+.FooterLink:hover {
+  color: #E63946;
 }
 /*# sourceMappingURL=style.css.map */
