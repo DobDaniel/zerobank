@@ -2,63 +2,238 @@ $main-color: #F1FAEE;
 $text-color: #1D3557;
 $alt-text-color: #F1FAEE;
 $hover-text-color: #A8DADC;
-$accent-color: #E63946;
+$accent-color: #c51625;
 
 @font-face {
     font-family: Dosis;
     src: url(./assets/fonts/Dosis-VariableFont_wght.ttf);
     font-weight: 100 900;
 }
-
-.Main{
+body{
+    overflow-x: hidden;
+}
+.WebsiteContainer{
     background-image: url("./assets/images/Background.webp"); background-size: cover; background-repeat: repeat; background-position: center; width: 100vw; height: auto; font-family: Dosis;color: $text-color; line-height: 2rem;
     
     // Media pentru background-position la device mare !! 
 }
     .Wrapper{
-        padding: 0 20px;
+        padding: 1rem clamp(20px,7vw,180px);
         display: relative;
+        
+        margin: 0 auto;
+        
     }
         .Navbar{
-            padding-top: 20px; display: flex; justify-content: space-between; align-items: center; width: 100%;
+            padding: clamp(0px,3vw,2rem) 0; display: flex; justify-content: space-between; align-items: center;
         }
-            .Brand{}
+            .Brand{flex: 1;}
                 .BrandImage{
-                    width: 80px; height: auto;
+                    @media screen and (min-width: 480px){
+                        width: clamp(200px,30vw,312px);
+                      
+                    }
+                    @media screen and (min-width: 768px){
+                        display: flex;
+                      
+                    }
                 }
-            .Hamburger{}
-            .Navigation {
-                display: none;
+            .Hamburger{ 
+               
+                img {width: clamp(30px,10vw,60px)}
+                    @media screen and (min-width: 768px){ display: none;
+
+                    }
             }
-                .NavList{}
+                
+            .NavigationDown{
+                
+                margin-top: 2rem;
+                margin-bottom: -2rem;
+
+            }
+            .NavListDown{
+                background-color: $text-color;
+                display: none; flex-direction: column;
+                align-items: center;
+                
+            }
+            .NavListItemDown{
+                padding-top: 1rem;
+                width: 100%;
+                text-align: center;
+                padding-bottom: 1rem;
+                border-bottom: 2px solid $alt-text-color;
+            }
+            .NavLinkDown{
+                font-size: clamp(2rem,4vw,4.5rem); font-weight: 600; color: $alt-text-color;
+            }
+            .Navigation {
+                
+                display: none;
+                
+                
+                    @media screen and (min-width: 768px){
+                        display: flex;
+                        flex: 1.5;
+                        font-size: clamp(1rem,4vw,3rem); 
+                        font-weight: 500;
+                    }
+            }
+                .NavList{ 
+                    flex: 1;
+                    display: flex;
+                    flex-direction: row; justify-content: space-between; }
                     .NavListItem{}
+                        .NavLink{ color: $text-color;  
+                            &:hover{color: $accent-color;}}
             .LineBreak{
                 position: absolute; left: 0; right: 0; border: 1px solid $text-color; margin-top: 1rem;
             }
-            .MainSection{ padding-top: 3rem; display: flex; flex-direction: column; align-items: flex-start;}
-                .MainHeading{ font-size: 2rem; font-weight: bold; line-height: 2.25rem; }
-                .MainBenefits{ padding-top: 2rem; font-size: 2rem; font-weight: 500; line-height: 2.5rem; }
-                    strong{ color: $accent-color; }
-                .CTAButton{ margin-top: 2.5rem; align-self: center; background-color: $accent-color; border: none; padding: 0.5rem 1.75rem; border-radius: 1.125rem; 
-                    &:hover{background-color: $text-color;}
-                }
-                    .CTAText{ color: white; font-size: 1.125rem; font-weight: 600; 
+            .MainSection{ padding-top: 3.5rem; display: flex; flex-direction: row; 
+                @media screen and (min-width: 768px){
+                    padding-bottom: 5rem;  
+                    
+                } }
+                .LeftMainSection{flex:1; display: flex; flex-direction: column; 
+                    @media screen and (min-width: 768px){
+                        justify-content: space-between;  
+                        
+                    } }
+                    .MainHeading{ font-size: clamp(2rem,4vw,4.5rem); font-weight: bold; line-height: clamp(2.25rem,5vw,5rem); }
+                    .MainBenefits{padding-top: 1.5rem;  font-size: clamp(2rem,4vw,4.5rem); font-weight: 500; line-height: clamp(2.5rem,5vw,5.5rem);
+                        @media screen and (min-width: 768px){
+                            padding: 0;  
+                            
                         }
-            .AvailableSection{ padding-top: 3rem; display: flex; flex-direction: column; }
-                .SectionHeading{ font-size: 1.75rem; font-weight: 700; line-height: 2.25rem; }
-                .SectionText{ padding-top: 1.5rem; font-size: 1.25rem; font-weight: 500;}
+                    }
+                        strong{ color: $accent-color; }
+                    .CTAButton{ margin-top: 1.25rem; align-self: center; background-color: $accent-color; border: none; padding: clamp(0.5rem,2vw,2rem) clamp(1.75rem,20vw,4rem); border-radius: 1.125rem; 
+                        &:hover{background-color: $text-color;}
+                        @media screen and (min-width: 768px){
+                            margin: 0; 
+                            
+                        }
+                    }
+                        .CTAText{ color: white; font-size: clamp(1.125rem,3vw,3rem); font-weight: 600; 
+                            }
+                .RightMainSection{display: flex; flex-direction: column; 
+                    @media screen and (min-width: 768px){
+                        justify-content: space-between;  
+                        flex: 1;
+                    } }
+                    .SaveImage{display: none;
+                        @media screen and (min-width: 768px){
+                            display: block; width: clamp(100px,45vw,831px); padding-top: 3rem;
+                            
+                        }
+                    }
+                    .AvailableImage{display: none;
+                        @media screen and (min-width: 768px){
+                            display: block; width: clamp(100px,35vw,497px); padding-top: 3rem;
+                            
+                        }}
+                    .SafeImage{display: none;
+                        @media screen and (min-width: 768px){
+                            display: block; width: clamp(100px,40vw,647px); padding-top: 3rem;
+                            
+                        }}
+                    .TransactionImage{display: none;
+                        @media screen and (min-width: 768px){
+                            display: block; width: clamp(100px,35vw,492px); padding-top: 3rem;
+                            
+                        }}
+            .LeftSection{flex:1; display: flex; flex-direction: column; 
+                @media screen and (min-width: 768px){
+                    
+                    
+                } }
+            .RightAligned{align-items: flex-end;}
+            .RightSection{display: flex; flex-direction: column; 
+                @media screen and (min-width: 768px){
+                   
+                    flex: 1;
+                    padding: 2rem;
+                } }
+                .SectionHeading{ font-size: clamp(2rem,4vw,4.5rem); font-weight: 700; line-height: clamp(2.25rem,5vw,5rem); }
+                .SectionText{ padding-top: 1.5rem; font-size: clamp(2rem,4vw,3rem); line-height: clamp(2.25rem,5vw,4rem);font-weight: 500; 
+                    @media screen and (min-width: 768px){
+                        padding-bottom: 3rem;
+                    } }
                     .OSLink{color: $accent-color;
                         &:hover{color: $text-color;}
                     }
-            .Acclamations{padding-top: 3rem; display: flex; flex-direction: column; }
-                .SectionAuthor{ padding-top: 0.25rem; font-size: 1.25rem; font-weight: 600; align-self: flex-end;}
-            .Contributors{ padding-top: 3rem; display: flex; flex-direction: column; }
-                .ContributorItem{ align-self: center; padding-top: 3rem;}
-                    .ContributorImage{}
-            .Footer{display: flex; flex-direction: column; align-items: center; justify-content: center;}
-                .FooterTitle{ padding-top: 3rem; font-size: 1.75rem; font-weight: 700; text-align: center; }
-                .FooterItem{ font-size: 1.25rem; padding-top: 1rem; font-weight: 500; text-align: center;}
-                .Copyright{ font-size: 1.25rem; padding: 2rem 0; font-weight: 500; }
-                .FooterLink{ text-decoration: none; color: $text-color;
+            .Acclamations{padding-top: 4rem; 
+                @media screen and (min-width: 768px){
+                    margin-bottom: clamp(0px,10vw,6rem);
+                } 
+                }
+                .AcclamationGrid{
+                    
+                    @media screen and (min-width: 1750px){
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        row-gap: 3rem;
+                        
+                        padding-top: 2rem;
+                        padding-bottom: 3rem;
+                    } 
+                }
+                    .AcclamationItem{display: flex; flex-direction: column; padding-top: clamp(1rem,5vw,4rem); 
+                        @media screen and (min-width: 1750px){
+                            padding-right:5rem;
+                        } }
+                    .SectionAuthor{ padding-top: 0.25rem; font-size: clamp(1.25rem,4vw,3rem); font-weight: 600; align-self: flex-end;}
+            .Contributors{ padding-top: 3rem; padding-bottom: clamp(0rem,4vw,10rem);}
+                .ContributorGrid{padding-top:3rem;  display: grid;grid-template: 1fr; place-items: center; row-gap: 2rem;
+                    
+                    @media screen and (min-width: 768px){
+                        grid-template-columns: 1fr 1fr;
+                        row-gap: 6rem;
+                        column-gap: 6rem;
+                        grid-row: auto auto;
+                        padding-top: clamp(3rem,8vw,12rem);
+                        padding-bottom: clamp(0rem,5vw,6rem);
+
+                    } }
+                    .ContributorItem{width: fit-content; }
+                        .ContributorImage{}
+                        .MicroImage{
+                            @media screen and (min-width: 480px){
+                                width: clamp(261px,40vw,716px);
+                            } 
+                        }
+                        .StackImage{
+                            @media screen and (min-width: 480px){
+                                width: clamp(273px,40vw,885px);
+                            } 
+                        }
+                        .StripeImage{
+                            @media screen and (min-width: 480px){
+                                width: clamp(215px,30vw,402px);
+                            } 
+                        }
+                        .GitImage{
+                        @media screen and (min-width: 480px){
+                            width: clamp(95px,20vw,400px);
+                        } }
+            .FooterGrid{display: grid; grid-template-columns: 1fr; padding-top: clamp(0rem,4vw,6rem);
+                column-gap: 2rem;
+                @media screen and (min-width: 480px){
+                    grid-template-columns: 1fr 1fr;
+                } 
+                @media screen and (min-width: 1280px){
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                } }
+                .FooterTitle{ padding-top: 3rem; font-size: clamp(1.75rem,5vw,3rem); font-weight: 700; text-align: center; 
+                    @media screen and (min-width: 768px){
+                        text-align: left; 
+                    } }
+                .FooterItem{ font-size: 1.25rem; padding-top: clamp(1rem,5vw,3rem); font-weight: 500; text-align: center;
+                    @media screen and (min-width: 768px){
+                        text-align: left; 
+                    } }
+                .Copyright{ width: 100%;font-size: clamp(1.25rem,5vw,2.25rem); margin-bottom: 8rem; margin-top: 4rem; font-weight: 500; text-align: center;}
+                .FooterLink{ text-decoration: none; color: $text-color; font-size: clamp(1rem,5vw,2.25rem);
                     &:hover {color: $accent-color;}
                 }

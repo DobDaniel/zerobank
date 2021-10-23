@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <base href="https://dobdaniel.github.io/zerobank/" target="_blank" />
+        <!-- <base href="https://dobdaniel.github.io/zerobank/" target="_blank" /> -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <link rel="canonical" href="https://dobdaniel.github.io/zerobank/" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -101,23 +101,45 @@
     </head>
 
     <body>
-        <main class="Main">
+        <div class="WebsiteContainer">
             <div class="Wrapper">
                 <div class="Navbar">
                     <a href="" class="Brand">
-                        <img
+                        <!-- <img
                             alt="Zero Bank"
                             class="BrandImage"
-                            src="assets/images/SmallLogo.svg"
-                        />
+                            srcset="
+                                assets/images/SmallLogo.svg  81w,
+                                assets/images/BigLogo.svg   312w
+                            "
+                            sizes="(max-width: 1279px) 81px,
+                            (min-width: 1280px) 312px"
+                            width="312" height="114"
+                        /> -->
+                        <picture>
+                            <source
+                                srcset="assets/images/MediumLogo.svg"
+                                media="(min-width: 480px) and (max-width: 1279px)"
+                            />
+                            <source
+                                srcset="assets/images/BigLogo.svg"
+                                media="(min-width: 1280px)"
+                            />
+                            <img
+                                srcset="assets/images/SmallLogo.svg"
+                                alt="Zero Bank"
+                                class="BrandImage"
+                                alt="…"
+                            />
+                        </picture>
                     </a>
 
-                    <a href="" class="Hamburger">
+                    <hamburger id="hamburger" class="Hamburger">
                         <img
                             alt="Hamburger button"
                             src="assets/images/Hamburger.svg"
                         />
-                    </a>
+                    </hamburger>
                     <nav class="Navigation">
                         <ul class="NavList">
                             <li class="NavListItem">
@@ -134,256 +156,417 @@
                             </li>
                         </ul>
                     </nav>
+                    
                 </div>
                 <div class="LineBreak"></div>
-                <section class="MainSection">
-                    <h1 class="MainHeading">
-                        Save your money <br />day in and day out
-                    </h1>
-                    <div class="MainBenefits">
-                        <strong>Zero</strong> commissions.<br />
-                        <strong>Zero</strong> added taxes.<br />
-                        <strong>Zero</strong> problems.<br />
-                    </div>
-                    <a href="" class="CTAButton">
-                        <span class="CTAText">Sign with us</span>
-                    </a>
-                </section>
+                <nav id="navdown2"  class="NavigationDown">
+                    <ul id="navdown1" class="NavListDown">
+                        <li class="NavListItemDown ">
+                            <a href="" class="NavLinkDown">Products</a>
+                        </li>
+                        <li class="NavListItemDown">
+                            <a href="" class="NavLinkDown">Team</a>
+                        </li>
+                        <li class="NavListItemDown">
+                            <a href="" class="NavLinkDown">Legal</a>
+                        </li>
+                        <li class="NavListItemDown">
+                            <a href="" class="NavLinkDown">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <main>
+                    
+                    <section class="MainSection">
+                        <div class="LeftMainSection">
+                            <h1 class="MainHeading">
+                                Save your money <br />day in and day out
+                            </h1>
+                            <div class="MainBenefits">
+                                <strong>Zero</strong> commissions.<br />
+                                <strong>Zero</strong> added taxes.<br />
+                                <strong>Zero</strong> problems.<br />
+                            </div>
+                            <a href="" class="CTAButton">
+                                <span class="CTAText">Sign with us</span>
+                            </a>
+                        </div>
+                        <div class="RightMainSection">
+                            <img
+                                alt="People building a wallet"
+                                src="./assets/images/Save.svg"
+                                class="SaveImage"
+                            />
+                        </div>
+                    </section>
 
-                <section class="AvailableSection">
-                    <h2 class="SectionHeading">Available everywhere</h2>
-                    <p class="SectionText">
-                        Manage your banking on all your devices.<br />Available
-                        on <a href="" class="OSLink">Windows</a>,
-                        <a href="" class="OSLink">MacOs</a>,
-                        <a href="" class="OSLink">Linux</a>,
-                        <a href="" class="OSLink">Android</a>,
-                        <a href="" class="OSLink">iOS</a> or use the
-                        <a href="" class="OSLink">web</a>
-                        version.
-                    </p>
-                    <a href="" class="CTAButton">
-                        <span class="CTAText"> Download now </span>
-                    </a>
-                </section>
-                <section class="AvailableSection">
-                    <h2 class="SectionHeading">Safe & sound banking</h2>
-                    <p class="SectionText">
-                        Secure your account using our top notch encryption
-                        policies.<br />
-                        No worries about your private information being leaked,
-                        we got you covered.
-                    </p>
-                    <a href="" class="CTAButton">
-                        <span class="CTAText"> Learn more </span>
-                    </a>
-                </section>
-                <section class="AvailableSection">
-                    <h2 class="SectionHeading">Lightning fast transactions</h2>
-                    <p class="SectionText">
-                        Send and recieve money all around the world at any time,
-                        no fees allowed.<br />
-                        Our client uses the newest banking technology to move
-                        your cash to any continent.
-                    </p>
-                    <a href="" class="CTAButton">
-                        <span class="CTAText"> Try it out </span>
-                    </a>
-                </section>
-                <section class="Acclamations">
-                    <h2 class="SectionHeading">What our partners are saying</h2>
-                    <p class="SectionText">
-                        "After I started using Zero Bank, my whole financial
-                        aspect of live improved substantially. I can’t recommend
-                        it enough."
-                    </p>
-                    <span class="SectionAuthor">
-                        -- Jason Morgan, VP of Interact
-                    </span>
-                    <p class="SectionText">
-                        "There’s nothing quite like Zero Bank. I tried dozens of
-                        different banking companies but this is the most
-                        reliant, comfortable and easy to use by far."
-                    </p>
-                    <span class="SectionAuthor">
-                        -- Stacy Statham, writer at CAS
-                    </span>
-                    <p class="SectionText">
-                        "I just love the ability to do my tasks on all my
-                        devices. Banking has never been so easy."
-                    </p>
-                    <span class="SectionAuthor">
-                        -- Carol Daniel, dev @ Google
-                    </span>
-                    <p class="SectionText">
-                        "Great support, great team, great bank."
-                    </p>
-                    <span class="SectionAuthor">
-                        -- Sindy Cowel, CEO of Uniform
-                    </span>
-                </section>
-                <section class="Contributors">
-                    <h2 class="SectionHeading">Our friends and contributors</h2>
-                    <a href="" class="ContributorItem">
-                        <picture class="ContributorImage">
-                            <source
-                                srcset="
-                                    assets/images/brands/Performance/SmallMicro.webp
-                                "
-                                type="image/webp"
-                            />
-                            <source
-                                srcset="
-                                    assets/images/brands/Performance/SmallMicro.png
-                                "
-                                type="image/png"
-                            />
+                    <section class="MainSection">
+                        <div class="LeftSection">
                             <img
-                                src="assets/images/brands/Performance/SmallMicro.png"
+                                alt="Girl near a smartphone"
+                                src="./assets/images/Available.svg"
+                                class="AvailableImage"
                             />
-                        </picture>
-                    </a>
-                    <a href="" class="ContributorItem">
-                        <picture class="ContributorImage">
-                            <source
-                                srcset="
-                                    assets/images/brands/Performance/SmallStack.webp
-                                "
-                                type="image/webp"
-                            />
-                            <source
-                                srcset="
-                                    assets/images/brands/Performance/SmallStack.png
-                                "
-                                type="image/png"
-                            />
+                        </div>
+                        <div class="RightSection">
+                            <h2 class="SectionHeading">Available everywhere</h2>
+                            <p class="SectionText">
+                                Manage your banking on all your devices.<br />Available
+                                on <a href="" class="OSLink">Windows</a>,
+                                <a href="" class="OSLink">MacOs</a>,
+                                <a href="" class="OSLink">Linux</a>,
+                                <a href="" class="OSLink">Android</a>,
+                                <a href="" class="OSLink">iOS</a> or use the
+                                <a href="" class="OSLink">web</a>
+                                version.
+                            </p>
+                            <a href="" class="CTAButton">
+                                <span class="CTAText"> Download now </span>
+                            </a>
+                        </div>
+                    </section>
+                    <section class="MainSection">
+                        <div class="LeftSection">
+                            <h2 class="SectionHeading">Safe & sound banking</h2>
+                            <p class="SectionText">
+                                Secure your account using our top notch
+                                encryption policies.<br />
+                                No worries about your private information being
+                                leaked, we got you covered.
+                            </p>
+                            <a href="" class="CTAButton">
+                                <span class="CTAText"> Learn more </span>
+                            </a>
+                        </div>
+                        <div class="RightSection RightAligned">
                             <img
-                                src="assets/images/brands/Performance/SmallStack.png"
+                                alt="Guy near security check"
+                                src="./assets/images/Safe.svg"
+                                class="SafeImage"
                             />
-                        </picture>
-                    </a>
-                    <a href="" class="ContributorItem">
-                        <picture class="ContributorImage">
-                            <source
-                                srcset="
-                                    assets/images/brands/Performance/SmallStripe.webp
-                                "
-                                type="image/webp"
-                            />
-                            <source
-                                srcset="
-                                    assets/images/brands/Performance/SmallStripe.png
-                                "
-                                type="image/png"
-                            />
+                        </div>
+                    </section>
+                    <section class="MainSection">
+                        <div class="LeftSection">
                             <img
-                                src="assets/images/brands/Performance/SmallStripe.png"
+                                alt="Girl with card in hand"
+                                src="./assets/images/Transactions.svg"
+                                class="TransactionImage"
                             />
-                        </picture>
-                    </a>
-                    <a href="" class="ContributorItem">
-                        <picture class="ContributorImage">
-                            <source
-                                srcset="
-                                    assets/images/brands/Performance/SmallGit.webp
-                                "
-                                type="image/webp"
-                            />
-                            <source
-                                srcset="
-                                    assets/images/brands/Performance/SmallGit.png
-                                "
-                                type="image/png"
-                            />
-                            <img
-                                src="assets/images/brands/Performance/SmallGit.png"
-                            />
-                        </picture>
-                    </a>
-                </section>
+                        </div>
+                        <div class="RightSection">
+                            <h2 class="SectionHeading">
+                                Lightning fast transactions
+                            </h2>
+                            <p class="SectionText">
+                                Send and recieve money all around the world at
+                                any time, no fees allowed.<br />
+                                Our client uses the newest banking technology to
+                                move your cash to any continent.
+                            </p>
+                            <a href="" class="CTAButton">
+                                <span class="CTAText"> Try it out </span>
+                            </a>
+                        </div>
+                    </section>
+                    <section class="Acclamations">
+                        <h2 class="SectionHeading">
+                            What our partners are saying
+                        </h2>
+                        <div class="AcclamationGrid">
+                            <div class="AcclamationItem">
+                                <p class="SectionText">
+                                    "After I started using Zero Bank, my whole
+                                    financial aspect of live improved
+                                    substantially. I can’t recommend it enough."
+                                </p>
+                                <span class="SectionAuthor">
+                                    -- Jason Morgan, VP of Interact
+                                </span>
+                            </div>
+                            <div class="AcclamationItem">
+                                <p class="SectionText">
+                                    "There’s nothing quite like Zero Bank. I
+                                    tried dozens of different banking companies
+                                    but this is the most reliant, comfortable
+                                    and easy to use by far."
+                                </p>
+                                <span class="SectionAuthor">
+                                    -- Stacy Statham, writer at CAS
+                                </span>
+                            </div>
+                            <div class="AcclamationItem">
+                                <p class="SectionText">
+                                    "I just love the ability to do my tasks on
+                                    all my devices. Banking has never been so
+                                    easy."
+                                </p>
+                                <span class="SectionAuthor">
+                                    -- Carol Daniel, dev @ Google
+                                </span>
+                            </div>
+                            <div class="AcclamationItem">
+                                <p class="SectionText">
+                                    "Great support, great team, great bank."
+                                </p>
+                                <span class="SectionAuthor">
+                                    -- Sindy Cowel, CEO of Uniform
+                                </span>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="Contributors">
+                        <h2 class="SectionHeading">
+                            Our friends and contributors
+                        </h2>
+                        <div class="ContributorGrid">
+                            <a href="" class="ContributorItem">
+                                <picture class="ContributorImage">
+                                    <source
+                                        srcset="
+                                            assets/images/brands/Performance/SmallMicro.webp
+                                        "
+                                        type="image/webp"
+                                        media="(max-width: 479px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            assets/images/brands/Performance/SmallMicro.png
+                                        "
+                                        type="image/png"
+                                        media="(max-width: 479px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            assets/images/brands/Performance/BigMicro.webp
+                                        "
+                                        type="image/webp"
+                                        media="(min-width: 480px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            assets/images/brands/Performance/BigMicro.png
+                                        "
+                                        type="image/png"
+                                        media="(min-width: 480px)"
+                                    />
+                                    <img
+                                        alt="Microsoft"
+                                        src="assets/images/brands/Performance/SmallMicro.png"
+                                        class="MicroImage"
+                                    />
+                                </picture>
+                            </a>
+                            <a href="" class="ContributorItem">
+                                <picture class="ContributorImage">
+                                    <source
+                                        srcset="
+                                            assets/images/brands/Performance/SmallStripe.webp
+                                        "
+                                        type="image/webp"
+                                        media="(max-width: 479px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            assets/images/brands/Performance/SmallStripe.png
+                                        "
+                                        type="image/png"
+                                        media="(max-width: 479px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            assets/images/brands/Performance/BigStripe.webp
+                                        "
+                                        type="image/webp"
+                                        media="(min-width: 480px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            assets/images/brands/Performance/BigStripe.png
+                                        "
+                                        type="image/png"
+                                        media="(min-width: 480px)"
+                                    />
+                                    <img
+                                        alt="Stripe"
+                                        src="assets/images/brands/Performance/SmallStripe.png"
+                                        class="StripeImage"
+                                    />
+                                </picture>
+                            </a>
+                            <a href="" class="ContributorItem">
+                                <picture class="ContributorImage">
+                                    <source
+                                        srcset="
+                                            assets/images/brands/Performance/SmallStack.webp
+                                        "
+                                        type="image/webp"
+                                        media="(max-width: 479px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            assets/images/brands/Performance/SmallStack.png
+                                        "
+                                        type="image/png"
+                                        media="(max-width: 479px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            assets/images/brands/Performance/BigStack.webp
+                                        "
+                                        type="image/webp"
+                                        media="(min-width: 480px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            assets/images/brands/Performance/BigStack.png
+                                        "
+                                        type="image/png"
+                                        media="(min-width: 480px)"
+                                    />
+                                    <img
+                                        alt="Stack Overflow"
+                                        src="assets/images/brands/Performance/SmallStack.png"
+                                        class="StackImage"
+                                    />
+                                </picture>
+                            </a>
+
+                            <a href="" class="ContributorItem">
+                                <picture class="ContributorImage">
+                                    <source
+                                        srcset="
+                                            assets/images/brands/Performance/SmallGit.webp
+                                        "
+                                        type="image/webp"
+                                        media="(max-width: 479px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            assets/images/brands/Performance/SmallGit.png
+                                        "
+                                        type="image/png"
+                                        media="(max-width: 479px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            assets/images/brands/Performance/BigGit.webp
+                                        "
+                                        type="image/webp"
+                                        media="(min-width: 480px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            assets/images/brands/Performance/BigGit.png
+                                        "
+                                        type="image/png"
+                                        media="(min-width: 480px)"
+                                    />
+                                    <img
+                                        alt="Github"
+                                        src="assets/images/brands/Performance/SmallGit.png"
+                                        class="GitImage"
+                                    />
+                                </picture>
+                            </a>
+                        </div>
+                    </section>
+                </main>
+                <div class="LineBreak"></div>
                 <footer class="Footer">
-                    <section class="FooterSection">
-                        <div class="FooterTitle">Information</div>
-                        <ul class="FooterList">
-                            <li class="FooterItem">
-                                <a href="" class="FooterLink">FAQ</a>
-                            </li>
-                            <li class="FooterItem">
-                                <a href="" class="FooterLink">Get started</a>
-                            </li>
-                            <li class="FooterItem">
-                                <a href="" class="FooterLink"
-                                    >Terms and services</a
-                                >
-                            </li>
-                            <li class="FooterItem">
-                                <a href="" class="FooterLink">Privacy policy</a>
-                            </li>
-                            <li class="FooterItem">
-                                <a href="" class="FooterLink">COVID-19</a>
-                            </li>
-                        </ul>
-                    </section>
-                    <section class="FooterSection">
-                        <div class="FooterTitle">Products</div>
-                        <ul class="FooterList">
-                            <li class="FooterItem">
-                                <a href="" class="FooterLink">Personal</a>
-                            </li>
-                            <li class="FooterItem">
-                                <a href="" class="FooterLink">Business</a>
-                            </li>
-                            <li class="FooterItem">
-                                <a href="" class="FooterLink"
-                                    >Domestic investments</a
-                                >
-                            </li>
-                            <li class="FooterItem">
-                                <a href="" class="FooterLink"
-                                    >International stocks</a
-                                >
-                            </li>
-                        </ul>
-                    </section>
-                    <section class="FooterSection">
-                        <div class="FooterTitle">About us</div>
-                        <ul class="FooterList">
-                            <li class="FooterItem">
-                                <a href="" class="FooterLink">Company</a>
-                            </li>
-                            <li class="FooterItem">
-                                <a href="" class="FooterLink">Team</a>
-                            </li>
-                            <li class="FooterItem">
-                                <a href="" class="FooterLink"
-                                    >Work @ Zero Bank</a
-                                >
-                            </li>
-                        </ul>
-                    </section>
-                    <section class="FooterSection">
-                        <div class="FooterTitle">Contact</div>
-                        <ul class="FooterList">
-                            <li class="FooterItem">
-                                <a href="" class="FooterLink">Chat with us</a>
-                            </li>
-                            <li class="FooterItem">
-                                <a href="" class="FooterLink"
-                                    >zerobank@firm.com</a
-                                >
-                            </li>
-                            <li class="FooterItem">
-                                <a href="" class="FooterLink"
-                                    >line: +40712165698s</a
-                                >
-                            </li>
-                        </ul>
-                    </section>
+                    <div class="FooterGrid">
+                        <section class="FooterSection">
+                            <div class="FooterTitle">Information</div>
+                            <ul class="FooterList">
+                                <li class="FooterItem">
+                                    <a href="" class="FooterLink">FAQ</a>
+                                </li>
+                                <li class="FooterItem">
+                                    <a href="" class="FooterLink"
+                                        >Get started</a
+                                    >
+                                </li>
+                                <li class="FooterItem">
+                                    <a href="" class="FooterLink"
+                                        >Terms and services</a
+                                    >
+                                </li>
+                                <li class="FooterItem">
+                                    <a href="" class="FooterLink"
+                                        >Privacy policy</a
+                                    >
+                                </li>
+                                <li class="FooterItem">
+                                    <a href="" class="FooterLink">COVID-19</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="FooterSection">
+                            <div class="FooterTitle">Products</div>
+                            <ul class="FooterList">
+                                <li class="FooterItem">
+                                    <a href="" class="FooterLink">Personal</a>
+                                </li>
+                                <li class="FooterItem">
+                                    <a href="" class="FooterLink">Business</a>
+                                </li>
+                                <li class="FooterItem">
+                                    <a href="" class="FooterLink"
+                                        >Domestic investments</a
+                                    >
+                                </li>
+                                <li class="FooterItem">
+                                    <a href="" class="FooterLink"
+                                        >International stocks</a
+                                    >
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="FooterSection">
+                            <div class="FooterTitle">About us</div>
+                            <ul class="FooterList">
+                                <li class="FooterItem">
+                                    <a href="" class="FooterLink">Company</a>
+                                </li>
+                                <li class="FooterItem">
+                                    <a href="" class="FooterLink">Team</a>
+                                </li>
+                                <li class="FooterItem">
+                                    <a href="" class="FooterLink"
+                                        >Work @ Zero Bank</a
+                                    >
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="FooterSection">
+                            <div class="FooterTitle">Contact</div>
+                            <ul class="FooterList">
+                                <li class="FooterItem">
+                                    <a href="" class="FooterLink"
+                                        >Chat with us</a
+                                    >
+                                </li>
+                                <li class="FooterItem">
+                                    <a href="" class="FooterLink"
+                                        >zerobank@firm.com</a
+                                    >
+                                </li>
+                                <li class="FooterItem">
+                                    <a href="" class="FooterLink"
+                                        >line: +40712165698s</a
+                                    >
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
                     <div class="Copyright">
                         © 2021 zerobank.com All Rights Reserved
                     </div>
                 </footer>
             </div>
-        </main>
+        </div>
     </body>
+    <script src="script.js">
+
+    </script>
 </html>

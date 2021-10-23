@@ -4,7 +4,11 @@
   font-weight: 100 900;
 }
 
-.Main {
+body {
+  overflow-x: hidden;
+}
+
+.WebsiteContainer {
   background-image: url("./assets/images/Background.webp");
   background-size: cover;
   background-repeat: repeat;
@@ -17,12 +21,13 @@
 }
 
 .Wrapper {
-  padding: 0 20px;
+  padding: 1rem clamp(20px, 7vw, 180px);
   display: relative;
+  margin: 0 auto;
 }
 
 .Navbar {
-  padding-top: 20px;
+  padding: clamp(0px, 3vw, 2rem) 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,16 +37,108 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
 }
 
-.BrandImage {
-  width: 80px;
-  height: auto;
+.Brand {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+@media screen and (min-width: 480px) {
+  .BrandImage {
+    width: clamp(200px, 30vw, 312px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .BrandImage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.Hamburger img {
+  width: clamp(30px, 10vw, 60px);
+}
+
+@media screen and (min-width: 768px) {
+  .Hamburger {
+    display: none;
+  }
+}
+
+.NavigationDown {
+  margin-top: 2rem;
+  margin-bottom: -2rem;
+}
+
+.NavListDown {
+  background-color: #1D3557;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.NavListItemDown {
+  padding-top: 1rem;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #F1FAEE;
+}
+
+.NavLinkDown {
+  font-size: clamp(2rem, 4vw, 4.5rem);
+  font-weight: 600;
+  color: #F1FAEE;
 }
 
 .Navigation {
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .Navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1.5;
+        -ms-flex: 1.5;
+            flex: 1.5;
+    font-size: clamp(1rem, 4vw, 3rem);
+    font-weight: 500;
+  }
+}
+
+.NavList {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.NavLink {
+  color: #1D3557;
+}
+
+.NavLink:hover {
+  color: #c51625;
 }
 
 .LineBreak {
@@ -53,7 +150,26 @@
 }
 
 .MainSection {
-  padding-top: 3rem;
+  padding-top: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media screen and (min-width: 768px) {
+  .MainSection {
+    padding-bottom: 5rem;
+  }
+}
+
+.LeftMainSection {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,36 +177,47 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+}
+
+@media screen and (min-width: 768px) {
+  .LeftMainSection {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .MainHeading {
-  font-size: 2rem;
+  font-size: clamp(2rem, 4vw, 4.5rem);
   font-weight: bold;
-  line-height: 2.25rem;
+  line-height: clamp(2.25rem, 5vw, 5rem);
 }
 
 .MainBenefits {
-  padding-top: 2rem;
-  font-size: 2rem;
+  padding-top: 1.5rem;
+  font-size: clamp(2rem, 4vw, 4.5rem);
   font-weight: 500;
-  line-height: 2.5rem;
+  line-height: clamp(2.5rem, 5vw, 5.5rem);
+}
+
+@media screen and (min-width: 768px) {
+  .MainBenefits {
+    padding: 0;
+  }
 }
 
 strong {
-  color: #E63946;
+  color: #c51625;
 }
 
 .CTAButton {
-  margin-top: 2.5rem;
+  margin-top: 1.25rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  background-color: #E63946;
+  background-color: #c51625;
   border: none;
-  padding: 0.5rem 1.75rem;
+  padding: clamp(0.5rem, 2vw, 2rem) clamp(1.75rem, 20vw, 4rem);
   border-radius: 1.125rem;
 }
 
@@ -98,14 +225,19 @@ strong {
   background-color: #1D3557;
 }
 
+@media screen and (min-width: 768px) {
+  .CTAButton {
+    margin: 0;
+  }
+}
+
 .CTAText {
   color: white;
-  font-size: 1.125rem;
+  font-size: clamp(1.125rem, 3vw, 3rem);
   font-weight: 600;
 }
 
-.AvailableSection {
-  padding-top: 3rem;
+.RightMainSection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,20 +247,124 @@ strong {
           flex-direction: column;
 }
 
+@media screen and (min-width: 768px) {
+  .RightMainSection {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+.SaveImage {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .SaveImage {
+    display: block;
+    width: clamp(100px, 45vw, 831px);
+    padding-top: 3rem;
+  }
+}
+
+.AvailableImage {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .AvailableImage {
+    display: block;
+    width: clamp(100px, 35vw, 497px);
+    padding-top: 3rem;
+  }
+}
+
+.SafeImage {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .SafeImage {
+    display: block;
+    width: clamp(100px, 40vw, 647px);
+    padding-top: 3rem;
+  }
+}
+
+.TransactionImage {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .TransactionImage {
+    display: block;
+    width: clamp(100px, 35vw, 492px);
+    padding-top: 3rem;
+  }
+}
+
+.LeftSection {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.RightAligned {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.RightSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .RightSection {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 2rem;
+  }
+}
+
 .SectionHeading {
-  font-size: 1.75rem;
+  font-size: clamp(2rem, 4vw, 4.5rem);
   font-weight: 700;
-  line-height: 2.25rem;
+  line-height: clamp(2.25rem, 5vw, 5rem);
 }
 
 .SectionText {
   padding-top: 1.5rem;
-  font-size: 1.25rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: clamp(2.25rem, 5vw, 4rem);
   font-weight: 500;
 }
 
+@media screen and (min-width: 768px) {
+  .SectionText {
+    padding-bottom: 3rem;
+  }
+}
+
 .OSLink {
-  color: #E63946;
+  color: #c51625;
 }
 
 .OSLink:hover {
@@ -136,7 +372,28 @@ strong {
 }
 
 .Acclamations {
-  padding-top: 3rem;
+  padding-top: 4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .Acclamations {
+    margin-bottom: clamp(0px, 10vw, 6rem);
+  }
+}
+
+@media screen and (min-width: 1750px) {
+  .AcclamationGrid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    row-gap: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.AcclamationItem {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,11 +401,18 @@ strong {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-top: clamp(1rem, 5vw, 4rem);
+}
+
+@media screen and (min-width: 1750px) {
+  .AcclamationItem {
+    padding-right: 5rem;
+  }
 }
 
 .SectionAuthor {
   padding-top: 0.25rem;
-  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 4vw, 3rem);
   font-weight: 600;
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -156,64 +420,127 @@ strong {
 
 .Contributors {
   padding-top: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  padding-bottom: clamp(0rem, 4vw, 10rem);
+}
+
+.ContributorGrid {
+  padding-top: 3rem;
+  display: -ms-grid;
+  display: grid;
+  grid-template: 1fr;
+  place-items: center;
+  row-gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .ContributorGrid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    row-gap: 6rem;
+    -webkit-column-gap: 6rem;
+            column-gap: 6rem;
+    grid-row: auto auto;
+    padding-top: clamp(3rem, 8vw, 12rem);
+    padding-bottom: clamp(0rem, 5vw, 6rem);
+  }
 }
 
 .ContributorItem {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  padding-top: 3rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
-.Footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@media screen and (min-width: 480px) {
+  .MicroImage {
+    width: clamp(261px, 40vw, 716px);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .StackImage {
+    width: clamp(273px, 40vw, 885px);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .StripeImage {
+    width: clamp(215px, 30vw, 402px);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .GitImage {
+    width: clamp(95px, 20vw, 400px);
+  }
+}
+
+.FooterGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  padding-top: clamp(0rem, 4vw, 6rem);
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+}
+
+@media screen and (min-width: 480px) {
+  .FooterGrid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .FooterGrid {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .FooterTitle {
   padding-top: 3rem;
-  font-size: 1.75rem;
+  font-size: clamp(1.75rem, 5vw, 3rem);
   font-weight: 700;
   text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+  .FooterTitle {
+    text-align: left;
+  }
+}
+
 .FooterItem {
   font-size: 1.25rem;
-  padding-top: 1rem;
+  padding-top: clamp(1rem, 5vw, 3rem);
   font-weight: 500;
   text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+  .FooterItem {
+    text-align: left;
+  }
+}
+
 .Copyright {
-  font-size: 1.25rem;
-  padding: 2rem 0;
+  width: 100%;
+  font-size: clamp(1.25rem, 5vw, 2.25rem);
+  margin-bottom: 8rem;
+  margin-top: 4rem;
   font-weight: 500;
+  text-align: center;
 }
 
 .FooterLink {
   text-decoration: none;
   color: #1D3557;
+  font-size: clamp(1rem, 5vw, 2.25rem);
 }
 
 .FooterLink:hover {
-  color: #E63946;
+  color: #c51625;
 }
 /*# sourceMappingURL=style.css.map */
