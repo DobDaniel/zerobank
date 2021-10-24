@@ -4,10 +4,6 @@
   font-weight: 100 900;
 }
 
-:root {
-  font-size: 12px;
-}
-
 body {
   overflow-x: hidden;
 }
@@ -51,7 +47,7 @@ body {
 
 @media screen and (min-width: 480px) {
   .BrandImage {
-    width: clamp(200px, 30vw, 212px);
+    width: clamp(200px, 30vw, 312px);
   }
 }
 
@@ -116,7 +112,7 @@ body {
     -webkit-box-flex: 1.5;
         -ms-flex: 1.5;
             flex: 1.5;
-    font-size: clamp(1rem, 4vw, 2.5rem);
+    font-size: clamp(1rem, 4vw, 3rem);
     font-weight: 500;
   }
 }
@@ -269,11 +265,8 @@ strong {
 @media screen and (min-width: 768px) {
   .SaveImage {
     display: block;
-    width: clamp(100px, 45vw, 631px);
+    width: clamp(100px, 45vw, 831px);
     padding-top: 3rem;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
   }
 }
 
@@ -284,11 +277,8 @@ strong {
 @media screen and (min-width: 768px) {
   .AvailableImage {
     display: block;
-    width: clamp(100px, 35vw, 397px);
+    width: clamp(100px, 35vw, 497px);
     padding-top: 3rem;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
   }
 }
 
@@ -299,11 +289,8 @@ strong {
 @media screen and (min-width: 768px) {
   .SafeImage {
     display: block;
-    width: clamp(100px, 40vw, 547px);
+    width: clamp(100px, 40vw, 647px);
     padding-top: 3rem;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
   }
 }
 
@@ -314,11 +301,8 @@ strong {
 @media screen and (min-width: 768px) {
   .TransactionImage {
     display: block;
-    width: clamp(100px, 35vw, 392px);
+    width: clamp(100px, 35vw, 492px);
     padding-top: 3rem;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
   }
 }
 
@@ -469,13 +453,13 @@ strong {
 
 @media screen and (min-width: 480px) {
   .MicroImage {
-    width: clamp(261px, 40vw, 516px);
+    width: clamp(261px, 40vw, 716px);
   }
 }
 
 @media screen and (min-width: 480px) {
   .StackImage {
-    width: clamp(273px, 40vw, 585px);
+    width: clamp(273px, 40vw, 885px);
   }
 }
 
@@ -487,7 +471,7 @@ strong {
 
 @media screen and (min-width: 480px) {
   .GitImage {
-    width: clamp(95px, 20vw, 200px);
+    width: clamp(95px, 20vw, 400px);
   }
 }
 
