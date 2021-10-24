@@ -348,6 +348,16 @@ strong {
   }
 }
 
+.LeftSection img {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .LeftSection img {
+    display: block;
+  }
+}
+
 .RightSection {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -364,6 +374,16 @@ strong {
         -ms-flex: 1;
             flex: 1;
     padding-right: 2rem;
+  }
+}
+
+.RightSection img {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .RightSection img {
+    display: block;
   }
 }
 
