@@ -2,6 +2,7 @@
   font-family: Dosis;
   src: url(./assets/fonts/Dosis-VariableFont_wght.woff2);
   font-weight: 100 900;
+  font-display: swap;
 }
 
 body {
@@ -45,9 +46,14 @@ body {
           flex: 1;
 }
 
+.BrandLink {
+  display: inline-block;
+}
+
 @media screen and (min-width: 480px) {
   .BrandImage {
     width: clamp(200px, 30vw, 312px);
+    height: auto;
   }
 }
 
@@ -59,8 +65,13 @@ body {
   }
 }
 
+.Hamburger:hover {
+  cursor: pointer;
+}
+
 .Hamburger img {
   width: clamp(30px, 10vw, 60px);
+  height: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -70,12 +81,13 @@ body {
 }
 
 .NavigationDown {
+  display: none;
   margin-top: 2rem;
   margin-bottom: -2rem;
 }
 
 .NavListDown {
-  background-color: #1D3557;
+  border-radius: 1rem;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -87,17 +99,25 @@ body {
 }
 
 .NavListItemDown {
+  background-color: #1D3557;
+  border-radius: 1rem;
   padding-top: 1rem;
   width: 100%;
   text-align: center;
   padding-bottom: 1rem;
+  margin-top: 0.25rem;
   border-bottom: 2px solid #F1FAEE;
+  border-top: 2px solid #F1FAEE;
 }
 
 .NavLinkDown {
   font-size: clamp(2rem, 4vw, 4.5rem);
-  font-weight: 600;
+  font-weight: 500;
   color: #F1FAEE;
+}
+
+.NavLinkDown:hover {
+  font-weight: 800;
 }
 
 .Navigation {
@@ -267,6 +287,7 @@ strong {
     display: block;
     width: clamp(100px, 45vw, 831px);
     padding-top: 3rem;
+    height: auto;
   }
 }
 
@@ -279,6 +300,7 @@ strong {
     display: block;
     width: clamp(100px, 35vw, 497px);
     padding-top: 3rem;
+    height: auto;
   }
 }
 
@@ -291,6 +313,7 @@ strong {
     display: block;
     width: clamp(100px, 40vw, 647px);
     padding-top: 3rem;
+    height: auto;
   }
 }
 
@@ -303,6 +326,7 @@ strong {
     display: block;
     width: clamp(100px, 35vw, 492px);
     padding-top: 3rem;
+    height: auto;
   }
 }
 
@@ -445,33 +469,31 @@ strong {
   }
 }
 
-.ContributorItem {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
 @media screen and (min-width: 480px) {
   .MicroImage {
     width: clamp(261px, 40vw, 716px);
+    height: auto;
   }
 }
 
 @media screen and (min-width: 480px) {
   .StackImage {
     width: clamp(273px, 40vw, 885px);
+    height: auto;
   }
 }
 
 @media screen and (min-width: 480px) {
   .StripeImage {
     width: clamp(215px, 30vw, 402px);
+    height: auto;
   }
 }
 
 @media screen and (min-width: 480px) {
   .GitImage {
     width: clamp(95px, 20vw, 400px);
+    height: auto;
   }
 }
 

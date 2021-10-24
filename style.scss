@@ -8,6 +8,7 @@ $accent-color: #c51625;
     font-family: Dosis;
     src: url(./assets/fonts/Dosis-VariableFont_wght.woff2);
     font-weight: 100 900;
+    font-display: swap;
 }
 
 body{
@@ -29,10 +30,12 @@ body{
             padding: clamp(0px,3vw,2rem) 0; display: flex; justify-content: space-between; align-items: center;
         }
             .Brand{flex: 1;}
+                .BrandLink{display: inline-block;}
                 .BrandImage{
+                    
                     @media screen and (min-width: 480px){
                         width: clamp(200px,30vw,312px);
-                      
+                        height: auto;
                     }
                     @media screen and (min-width: 768px){
                         display: flex;
@@ -40,35 +43,45 @@ body{
                     }
                 }
             .Hamburger{ 
-               
-                img {width: clamp(30px,10vw,60px)}
+                &:hover{cursor: pointer;}
+                img {width: clamp(30px,10vw,60px); height: auto;}
                     @media screen and (min-width: 768px){ display: none;
 
                     }
             }
-                
+          
             .NavigationDown{
-                
+                display: none;
                 margin-top: 2rem;
                 margin-bottom: -2rem;
-
+                
             }
             .NavListDown{
-                background-color: $text-color;
+                
+                border-radius: 1rem;
                 display: none; flex-direction: column;
                 align-items: center;
                 
             }
             .NavListItemDown{
+                background-color: $text-color;
+                border-radius: 1rem;
                 padding-top: 1rem;
                 width: 100%;
                 text-align: center;
                 padding-bottom: 1rem;
+                margin-top: 0.25rem;
                 border-bottom: 2px solid $alt-text-color;
+                border-top: 2px solid $alt-text-color;
+                    
             }
             .NavLinkDown{
-                font-size: clamp(2rem,4vw,4.5rem); font-weight: 600; color: $alt-text-color;
+                font-size: clamp(2rem,4vw,4.5rem); font-weight: 500; color: $alt-text-color;
+                
+                
             }
+            
+            .NavLinkDown:hover{font-weight: 800;}
             .Navigation {
                 
                 display: none;
@@ -126,23 +139,23 @@ body{
                     .SaveImage{display: none;
                         @media screen and (min-width: 768px){
                             display: block; width: clamp(100px,45vw,831px); padding-top: 3rem;
-                            
+                            height: auto;
                         }
                     }
                     .AvailableImage{display: none;
                         @media screen and (min-width: 768px){
                             display: block; width: clamp(100px,35vw,497px); padding-top: 3rem;
-                            
+                            height: auto;
                         }}
                     .SafeImage{display: none;
                         @media screen and (min-width: 768px){
                             display: block; width: clamp(100px,40vw,647px); padding-top: 3rem;
-                            
+                            height: auto;
                         }}
                     .TransactionImage{display: none;
                         @media screen and (min-width: 768px){
                             display: block; width: clamp(100px,35vw,492px); padding-top: 3rem;
-                            
+                            height: auto;
                         }}
             .LeftSection{flex:1; display: flex; flex-direction: column; 
                 @media screen and (min-width: 768px){
@@ -197,26 +210,26 @@ body{
                         padding-bottom: clamp(0rem,5vw,6rem);
 
                     } }
-                    .ContributorItem{width: fit-content; }
+                    .ContributorItem{ }
                         .ContributorImage{}
                         .MicroImage{
                             @media screen and (min-width: 480px){
-                                width: clamp(261px,40vw,716px);
+                                width: clamp(261px,40vw,716px); height: auto;
                             } 
                         }
                         .StackImage{
                             @media screen and (min-width: 480px){
-                                width: clamp(273px,40vw,885px);
+                                width: clamp(273px,40vw,885px); height: auto;
                             } 
                         }
                         .StripeImage{
                             @media screen and (min-width: 480px){
-                                width: clamp(215px,30vw,402px);
+                                width: clamp(215px,30vw,402px); height: auto;
                             } 
                         }
                         .GitImage{
                         @media screen and (min-width: 480px){
-                            width: clamp(95px,20vw,400px);
+                            width: clamp(95px,20vw,400px); height: auto;
                         } }
             .FooterGrid{display: grid; grid-template-columns: 1fr; padding-top: clamp(0rem,4vw,6rem);
                 column-gap: 2rem;
