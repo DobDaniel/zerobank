@@ -1,3 +1,7 @@
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('service-worker.js');
+}
+
 let hamburger = document.getElementById("hamburger");
 let nav1 = document.getElementById("navdown1");
 let nav2 = document.getElementById("navdown2");
