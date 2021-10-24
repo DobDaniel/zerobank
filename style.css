@@ -5,7 +5,8 @@
   font-display: swap;
 }
 
-body {
+html {
+  width: 100vw;
   overflow-x: hidden;
 }
 
@@ -469,31 +470,47 @@ strong {
   }
 }
 
+.MicroImage {
+  width: 100%;
+  height: auto;
+}
+
 @media screen and (min-width: 480px) {
   .MicroImage {
     width: clamp(261px, 40vw, 716px);
-    height: auto;
   }
+}
+
+.StackImage {
+  width: 100%;
+  height: auto;
 }
 
 @media screen and (min-width: 480px) {
   .StackImage {
     width: clamp(273px, 40vw, 885px);
-    height: auto;
   }
+}
+
+.StripeImage {
+  width: 100%;
+  height: auto;
 }
 
 @media screen and (min-width: 480px) {
   .StripeImage {
     width: clamp(215px, 30vw, 402px);
-    height: auto;
   }
+}
+
+.GitImage {
+  width: 100%;
+  height: auto;
 }
 
 @media screen and (min-width: 480px) {
   .GitImage {
     width: clamp(95px, 20vw, 400px);
-    height: auto;
   }
 }
 

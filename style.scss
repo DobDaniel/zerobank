@@ -10,8 +10,8 @@ $accent-color: #c51625;
     font-weight: 100 900;
     font-display: swap;
 }
-
-body{
+html{
+    width: 100vw;
     overflow-x: hidden;
 }
 .WebsiteContainer{
@@ -212,24 +212,24 @@ body{
                     } }
                     .ContributorItem{ }
                         .ContributorImage{}
-                        .MicroImage{
+                        .MicroImage{ width: 100%;height: auto;
                             @media screen and (min-width: 480px){
-                                width: clamp(261px,40vw,716px); height: auto;
+                                width: clamp(261px,40vw,716px); 
                             } 
                         }
-                        .StackImage{
+                        .StackImage{width: 100%; height: auto;
                             @media screen and (min-width: 480px){
-                                width: clamp(273px,40vw,885px); height: auto;
+                                width: clamp(273px,40vw,885px); 
                             } 
                         }
-                        .StripeImage{
+                        .StripeImage{width: 100%; height: auto;
                             @media screen and (min-width: 480px){
-                                width: clamp(215px,30vw,402px); height: auto;
+                                width: clamp(215px,30vw,402px); 
                             } 
                         }
-                        .GitImage{
+                        .GitImage{width: 100%; height: auto;
                         @media screen and (min-width: 480px){
-                            width: clamp(95px,20vw,400px); height: auto;
+                            width: clamp(95px,20vw,400px); 
                         } }
             .FooterGrid{display: grid; grid-template-columns: 1fr; padding-top: clamp(0rem,4vw,6rem);
                 column-gap: 2rem;
