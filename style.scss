@@ -109,9 +109,10 @@ html{
                     padding-bottom: 5rem;  
                     
                 } }
-                .LeftMainSection{flex:1; display: flex; flex-direction: column; 
+                .LeftMainSection{ display: flex; flex-direction: column; width: 100%;
                     @media screen and (min-width: 768px){
-                        justify-content: space-between;  
+                        flex:1;
+                          
                         
                     } }
                     .MainHeading{ font-size: clamp(2rem,4vw,4.5rem); font-weight: bold; line-height: clamp(2.25rem,5vw,5rem); }
@@ -131,8 +132,9 @@ html{
                     }
                         .CTAText{ color: white; font-size: clamp(1.125rem,3vw,3rem); font-weight: 600; 
                             }
-                .RightMainSection{display: flex; flex-direction: column; 
+                .RightMainSection{display: none;
                     @media screen and (min-width: 768px){
+                        display: flex; flex-direction: column; 
                         justify-content: space-between;  
                         flex: 1;
                     } }
@@ -157,17 +159,18 @@ html{
                             display: block; width: clamp(100px,35vw,492px); padding-top: 3rem;
                             height: auto;
                         }}
-            .LeftSection{flex:1; display: flex; flex-direction: column; 
+            .LeftSection{display: flex; flex-direction: column; 
                 @media screen and (min-width: 768px){
-                    
-                    
-                } }
-            .RightAligned{align-items: flex-end;}
-            .RightSection{display: flex; flex-direction: column; 
+                    flex:1; 
+            
+                } 
+             }
+            
+            .RightSection{
+                display: flex; flex-direction: column; 
                 @media screen and (min-width: 768px){
-                   
-                    flex: 1;
-                    padding: 2rem;
+                    flex:1; 
+                    padding-right: 2rem;
                 } }
                 .SectionHeading{ font-size: clamp(2rem,4vw,4.5rem); font-weight: 700; line-height: clamp(2.25rem,5vw,5rem); }
                 .SectionText{ padding-top: 1.5rem; font-size: clamp(2rem,4vw,3rem); line-height: clamp(2.25rem,5vw,4rem);font-weight: 500; 

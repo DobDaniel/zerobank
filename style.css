@@ -188,9 +188,6 @@ html {
 }
 
 .LeftMainSection {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,13 +195,14 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
   .LeftMainSection {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
 }
 
@@ -259,17 +257,18 @@ strong {
 }
 
 .RightMainSection {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
   .RightMainSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -332,9 +331,6 @@ strong {
 }
 
 .LeftSection {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -344,10 +340,12 @@ strong {
           flex-direction: column;
 }
 
-.RightAligned {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+@media screen and (min-width: 768px) {
+  .LeftSection {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
 
 .RightSection {
@@ -365,7 +363,7 @@ strong {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    padding: 2rem;
+    padding-right: 2rem;
   }
 }
 
